@@ -227,6 +227,9 @@ async def async_setup(hass, config):
             elif ent_domain == "device_tracker":
                 publish_config = True
 
+            elif ent_domain == "climate":
+                publish_config = True
+
             elif ent_domain == "light":
                 del config["json_attr_t"]
                 config["cmd_t"] = f"{mybase}set_light"
